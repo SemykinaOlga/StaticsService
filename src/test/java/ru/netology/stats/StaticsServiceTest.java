@@ -28,35 +28,47 @@ class StaticsServiceTest {
         //производим проверку (сравниваем ожидаемый и фактический)
         assertEquals(expected, actual);
     }
-//    @Test
-//    void shouldfindMax() {
-//        StaticsService service = new StaticsService();
-//        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-//        long expected = 20;
-//        //вызываем целевой метод
-//        long actual = service.findMaxSum(purchases);
-//
-//        //производим проверку (сравниваем ожидаемый и фактический)
-//        assertEquals(expected, actual);
-//    }
+
     @Test
-    void shouldfindMax() {
+    void shouldfindMaxMonth() {
         StaticsService service = new StaticsService();
         long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 20;
+        long expected = 8;
         //вызываем целевой метод
-        long actual = service.findMaxSum(purchases);
+        long actual = service.findMaxMonth(purchases);
 
         //производим проверку (сравниваем ожидаемый и фактический)
         assertEquals(expected, actual);
     }
     @Test
-    void shouldfindMin() {
+    void shouldfindMinMonth() {
         StaticsService service = new StaticsService();
         long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 7;
+        long expected = 9;
         //вызываем целевой метод
-        long actual = service.findMinSum(purchases);
+        long actual = service.findMinMonth(purchases);
+
+        //производим проверку (сравниваем ожидаемый и фактический)
+        assertEquals(expected, actual);
+    }
+    @Test
+    void findAmountMonthOverAverage() {
+        StaticsService service = new StaticsService();
+        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        //вызываем целевой метод
+        long actual = service.findAmountMonthOverAverage(purchases);
+
+        //производим проверку (сравниваем ожидаемый и фактический)
+        assertEquals(expected, actual);
+    }
+    @Test
+    void findAmountMonthLowAverage() {
+        StaticsService service = new StaticsService();
+        long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        //вызываем целевой метод
+        long actual = service.findAmountMonthLowAverage(purchases);
 
         //производим проверку (сравниваем ожидаемый и фактический)
         assertEquals(expected, actual);
